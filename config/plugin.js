@@ -12,4 +12,9 @@ exports.nunjucks = {
     enable: true,
     package: 'egg-router-plus',
   };
+  //允许跨域
+  exports.cors = {
+    enable: true,
+    package: 'egg-cors',
+  }
   
