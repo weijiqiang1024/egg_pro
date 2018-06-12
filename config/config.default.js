@@ -10,8 +10,8 @@ module.exports = appInfo => {
   config.view = {
     defaultViewEngine: 'nunjucks',
     mapping: {
-    '.tpl': 'nunjucks',
-  },
+      '.tpl': 'nunjucks',
+    },
   }
   config.news = {
     pageSize: 5,
@@ -19,23 +19,25 @@ module.exports = appInfo => {
   }
   //安全配置
   config.security = {
-    domainWhiteList:['http://127.0.0.1'] ,
+    domainWhiteList: ['http://127.0.0.1'],
     csrf: {
       enable: false,
     },
   };
   //跨域
   config.cors = {
-    origin:'*',
+    origin: '*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-    }
+  }
 
   config.mongoose = {
-    client: {
-      url: 'mongodb://127.0.0.1:27017/good_idea',
-      options: {
-        server: { poolSize: 20 },
-      },
+
+    url: 'mongodb://127.0.0.1:27017/good_idea',
+    options: {
+      useMongoClient: true,
+      autoReconnect: true,
+      reconnectTries: Number.MAX_VALUE,
+      bufferMaxEntries: 0,
     },
   }
   config.middleware = [];
