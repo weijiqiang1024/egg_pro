@@ -8,6 +8,7 @@ module.exports = app => {
   const { router,controller } = app;
 
   router.post('/login',controller.login.post);
+  router.get('/user',controller.user.index);
   // require('./router/login')(app);
   // require('./router/api')(app);
 };

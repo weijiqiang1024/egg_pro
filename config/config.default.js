@@ -29,6 +29,15 @@ module.exports = appInfo => {
     origin:'*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
     }
+
+  config.mongoose = {
+    client: {
+      url: 'mongodb://127.0.0.1:27017/good_idea',
+      options: {
+        server: { poolSize: 20 },
+      },
+    },
+  }
   config.middleware = [];
 
   return config;

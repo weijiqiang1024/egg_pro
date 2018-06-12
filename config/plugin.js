@@ -17,4 +17,14 @@ exports.nunjucks = {
     enable: true,
     package: 'egg-cors',
   }
+  //mysql
+  exports.mysql = {
+    enable: true,
+    package: 'egg-mysql',
+  };
+  //mongodb
+  exports.mongoose = {
+    enable: true,
+    package: 'egg-mongoose',
+  };
   

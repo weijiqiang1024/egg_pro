@@ -3,9 +3,9 @@
 const Controller = require('egg').Controller;
 
 class UserController extends Controller {
-  async info() {
+  async index() {
     const {ctx} = this;
-    this.ctx.body ={name:`hi, ${ctx.params.id}`} ;
+    ctx.body = await ctx.model.User.find({});
   }
 }
 
