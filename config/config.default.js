@@ -31,7 +31,6 @@ module.exports = appInfo => {
   }
 
   config.mongoose = {
-
     url: 'mongodb://127.0.0.1:27017/good_idea',
     options: {
       useMongoClient: true,
@@ -40,6 +39,7 @@ module.exports = appInfo => {
       bufferMaxEntries: 0,
     },
   }
+
   config.middleware = [];
 
   return config;
