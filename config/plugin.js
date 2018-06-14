@@ -2,10 +2,18 @@
 
 // had enabled by egg
 // exports.static = true;
+
+//模板
 exports.nunjucks = {
     enable: true,
     package: 'egg-view-nunjucks'
   };
+
+  //验证
+exports.validate = {
+  enable: true,
+  package: 'egg-validate',
+}
 
   // {app_root}/config/plugin.js
   exports.routerPlus = {
@@ -26,5 +34,10 @@ exports.nunjucks = {
   exports.mongoose = {
     enable: true,
     package: 'egg-mongoose',
+  }
+
+  exports.jwt = {
+    enable: true,
+    package: 'egg-jwt',
   }
   
