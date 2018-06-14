@@ -46,6 +46,10 @@ module.exports = appInfo => {
     match: '/jwt', // optional
   }
 
+  exports.bcrypt = {
+    saltRounds: 10 // default 10
+  }
+
   config.middleware = [];
 
   return config;

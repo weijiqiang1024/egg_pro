@@ -40,4 +40,9 @@ exports.validate = {
     enable: true,
     package: 'egg-jwt',
   }
+
+  exports.bcrypt = {
+    enable: true,
+    package: 'egg-bcrypt'
+  }
   
