@@ -36,6 +36,28 @@ class UserController extends Controller {
     ctx.helper.success({ctx,res});
   }
 
+  
+/**
+ *
+ *find
+ * @memberof UserController
+ */
+async find(){
+    const {ctx,service} = this;
+    const payload = ctx.request.body || {};
+    const res = await service.user.find(payload);
+    ctx.helper.success({ctx,res});
+  }
+
+  async update(){
+    const {ctx,service} = this;
+    //组装参数
+    const id = ctx.request.body._id || '';
+    const payload = ctx.request.body || {};
+    const res = await service.user.update(id,payload);
+    ctx.helper.success({ctx,res});
+  }
+
    
 }
 
