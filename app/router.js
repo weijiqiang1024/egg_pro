@@ -12,6 +12,7 @@ module.exports = app => {
   router.post('/api/sys_user/create',controller.user.create);
   router.post('/api/sys_user/find',controller.user.find);
   router.post('/api/sys_user/update',controller.user.update);
+  router.post('/api/sys_user/delete',controller.user.delete);
   // router.delete('/api/role', controller.role.removes)
   // router.resources('role', '/api/role', controller.role)
   // require('./router/login')(app);

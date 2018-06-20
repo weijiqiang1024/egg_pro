@@ -58,6 +58,15 @@ async find(){
     ctx.helper.success({ctx,res});
   }
 
+  async delete(){
+    const {ctx,service} = this;
+    //组装参数
+    const id = ctx.request.body.id || '';
+  
+    const res = await service.user.destroy(id);
+    ctx.helper.success({ctx,res});
+  }
+
    
 }
 

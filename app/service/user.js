@@ -70,6 +70,15 @@ class UserService extends Service {
 		}
 		return ctx.model.User.findByIdAndUpdate(_id, payload);
 	}
+
+	async destroy(_id) {
+		const { ctx, service } = this;
+		const user = await ctx.model.User.findById(_id);
+		if (!user) {
+		  ctx.throw(404, 'user not found');
+		}
+		return ctx.model.User.findByIdAndRemove(_id);
+	  }
 }
 
 module.exports = UserService;
